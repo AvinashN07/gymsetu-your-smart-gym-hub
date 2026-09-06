@@ -18,9 +18,9 @@ function NavItems({ onNavigate }: { onNavigate?: () => void }) {
           key={item.to}
           to={item.to}
           onClick={onNavigate}
-          className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-fog transition-colors hover:bg-raise hover:text-foreground data-[status=active]:bg-lime/10 data-[status=active]:font-semibold data-[status=active]:text-lime data-[status=active]:ring-1 data-[status=active]:ring-lime/30"
+          className="group flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-fog transition-colors hover:bg-raise hover:text-foreground data-[status=active]:bg-lime/10 data-[status=active]:font-semibold data-[status=active]:text-lime data-[status=active]:ring-1 data-[status=active]:ring-lime/30"
         >
-          <span className="size-1.5 shrink-0 rounded-full bg-fog/40 [a[data-status=active]_&]:bg-lime" />
+          <span className="size-1.5 shrink-0 rounded-full bg-fog/40 group-data-[status=active]:bg-lime" />
           {item.label}
         </Link>
       ))}
